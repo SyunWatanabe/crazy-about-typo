@@ -12,10 +12,7 @@ const IndexPage = ({ feed }) => (
     <ul>
     {feed.map(f => {
       return (
-        <>
-          <li>{f.typo}</li>
-          <li>{f.correct}</li>
-        </>
+        <Card typoText={f.typo} correctText={f.correct} />
       )
     })}
     </ul>
