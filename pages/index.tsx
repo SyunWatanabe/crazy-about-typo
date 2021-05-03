@@ -3,10 +3,11 @@ import { GetStaticProps } from 'next'
 import prisma from '../lib/prisma'
 import TypoForm from '../components/TypoForm'
 import Layout from '../components/Layout'
+import Card from '../components/Card'
 
 const IndexPage = ({ feed }) => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Crazy About Typo</h1>
+  <Layout>
+    <h1>誤字に夢中！</h1>
     <TypoForm />
     <ul>
     {feed.map(f => {
@@ -18,11 +19,6 @@ const IndexPage = ({ feed }) => (
       )
     })}
     </ul>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
   </Layout>
 );
 
